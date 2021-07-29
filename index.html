@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <title>C146 Project</title>
+</head>
+<body>
+    <a-scene background="color: coral">
+        <a-entity position="0 0 25">
+            <a-camera></a-camera>
+        </a-entity>
+        <!--Plane-->
+        <a-plane position="0 0 0" color="#e444f2" width="15" height="15" rotation="-80 0 0"></a-plane>
+        <!--Foot 1-->
+        <a-entity>
+            <a-box position="-2 1 0" color="brown" width="2" height="1" rotation="-80 0 50"></a-box>
+        </a-entity>
+        <!--Foot 2-->
+        <a-entity>
+            <a-box position="2 1 0" color="brown" width="2" height="1" rotation="-80 0 -50"></a-box>
+        </a-entity>
+        <!--Leg 1-->
+        <a-entity>
+            <a-cylinder position="-2 3 0" color="dodgerblue" radius="0.4" height="5"></a-cylinder>
+        </a-entity>
+        <!--Leg 2-->
+        <a-entity>
+            <a-cylinder position="2 3 0" color="dodgerblue" radius="0.4" height="5"></a-cylinder>
+        </a-entity>
+        <!--Upper Body P1-->
+        <a-entity>
+            <a-box position="0 8 0" color="gold" depth="2" width="6" height="6"></a-box>
+        </a-entity>
+        <!--Hand 1-->
+        <a-entity>
+            <a-box position="-4 8 0" color="#f22962" width="1" height="5" rotation="-10 0 -10"></a-box>
+        </a-entity>
+        <!--Hand 2-->
+        <a-entity>
+            <a-box position="4 8 0" color="#f22962" width="1" height="5" rotation="-10 0 10"></a-box>
+        </a-entity>
+        <!--Neck-->
+        <a-entity>
+            <a-box position="0 12 0" color="#f22962" width="1" height="4"></a-box>
+        </a-entity>
+        <!--Face-->
+        <a-entity>
+            <a-box position="0 14.5 0" color="#f22962" depth="2" width="5" height="4"></a-box>
+        </a-entity>
+        <!--Eye 1-->
+        <a-entity>
+            <a-sphere position="-1.2 15 0.5" color="white" radius="1"></a-sphere>
+        </a-entity>
+        <a-entity animation="property: position; from: -0.2 0 0; to: 0.2 0 0; dir: alternate; loop: true; dur: 500">
+            <a-sphere position="-1.2 15 1.1" color="black" radius="0.5"></a-sphere>
+        </a-entity>
+        <!--Eye 2-->
+        <a-entity>
+            <a-sphere position="1.2 15 0.5" color="white" radius="1"></a-sphere>
+        </a-entity>
+        <a-entity animation="property: position; from: 0.2 0 0; to: -0.2 0 0; dir: alternate; loop: true; dur: 500">
+            <a-sphere position="1.2 15 1.1" color="black" radius="0.5"></a-sphere>
+        </a-entity>
+        <!--Antenna-->
+        <a-entity animation="property: position; from: -0.5 0 0; to: 0.5 0 0; dir: alternate; loop: true; dur: 250">
+            <a-cylinder position="0 17.5 0" color="black" radius="0.2" height="2"></a-cylinder>
+        </a-entity>
+    </a-scene>
+</body>
+</html>
